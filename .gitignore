@@ -1,3 +1,10 @@
+config.py
+azure-pipelines.yml
+cogs/__pycache__/
+cogs/utils/__pycache__/
+__pycache__/
+*.pyc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
