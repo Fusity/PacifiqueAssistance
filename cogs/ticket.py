@@ -35,7 +35,7 @@ class Ticket(commands.Cog):
                         }
 
         channel = await guild.create_text_channel(f"{user.name}-ticket", overwrites = overwrites)
-        await channel.send(f"**Bienvenue Dans le système de Partenariat ! Si vous remplissez les conditions publicitaire nous pouvons continuer, présenter nous votre support de Partenariat {user.mention}, un membre du personnel s'occupera de votre demande.**")
+        await channel.send(f"**Bienvenue Dans le système de Partenariat ! Si vous remplissez les conditions publicitaire nous pouvons continuer, présentez nous votre support de Partenariat {user.mention}, un membre du personnel s'occupera de votre demande.**")
 
     @bot.command()
     async def evolution(self, ctx, user: discord.Member = None):
@@ -74,7 +74,7 @@ class Ticket(commands.Cog):
                         }
 
         channel = await guild.create_text_channel(f"{user.name}-ticket", overwrites = overwrites)
-        await channel.send(f"**Bienvenue {user.mention} dans l'interface de votre demande de création et développement de votre graphismes pour votre serveur Discord ! Nous vous demandons de faire la description de votre demande ci-dessous pour que le ticket ne sert pas à rien, un {test.mention} prendra en charge votre demande le plus vite possible !**")
+        await channel.send(f"**Bienvenue {user.mention} dans l'interface de votre demande de création et développement de vos graphismes pour votre serveur Discord ! Nous vous demandons de faire la description de votre demande ci-dessous pour que le ticket ne sert pas à rien, un {test.mention} prendra en charge votre demande le plus vite possible !**")
 
     @bot.command()
     async def montage_vidéo(self, ctx, user: discord.Member = None):
@@ -98,7 +98,7 @@ class Ticket(commands.Cog):
                         }
 
         channel = await guild.create_text_channel(f"{user.name}-ticket", overwrites = overwrites)
-        await channel.send(f"**Bienvenue cher candidat dans le système global de recrutement {user.mention} merci d'avoir pris le ticket !**\n**__Si vous souhaitez devenir Modérateur du Discord :__ vous serez en relations avec la fédération PacifiqueCreation nous vous donneront des questions à répondre et nous vous mettrons sous épreuves avant le test vocal, vous devez avant tous respecté les conditions dans recrutement modération.**\n**__Si vous souhaitez devenir Concepteur serveur du Discord :__ Nous allons vous mettre à l'épreuve, vous devez,** *__Créer un serveur de test avec tout ce que vous savez faire dessus.__*\n**__Si vous souhaitez devenir Concepteur de BOT Discord :__ Nous allons vous mettre à l'épreuve, vous devez,** *__Créer un BOT Discord avec toutes les fonctions et commandes que vous pouvez faire dedans en suivant aussi nos services.__*\n**__Si vous souhaitez devenir Concepteur Graphisme;__  Nous allons vous mettre à l'épreuve vous devez,** *__Créer un Graphisme concernant le serveur Discord, (PacifiqueCreation) par vous même, vous avez carte blanche, en suivant aussi nos services__*\n\n__Remarque : Prendre un graphisme sur un moteur de recherche ou prendre des idées sur un moteur de recherche ou autre nous montre que vous êtes pas expérimenté et que vous n'avez pas d'imagination pour créer des œuvres.\n**__Si vous souhaitez devenir Collaborateur du Projet :__  vous respecter les critères de collaboration ? alors nous pouvons continuer, présenter nous votre serveur discord et un personnel du serveur s'occupera de votre demande de collaboration**\n**__Si vous souhaitez devenir Concepteur de création et développement de vidéo pour des présentation de serveur sous format vidéo ;__ vous devez nous montrer une vidéo avec montage que vous avez créer vous même**\n*__Remarque :__ Dans tout les domaines de conceptions nous vous métrons à l'épreuve pour le domaine de recrutement de concepteur*")
+        await channel.send(f"**Bienvenue cher candidat dans le système global de recrutement {user.mention} merci d'avoir pris le ticket !**\n**__Si vous souhaitez devenir Modérateur du Discord :__ vous serez en relations avec la fédération PacifiqueCreation nous vous poserons quelques questions et nous vous mettrons sous épreuves avant le test vocal, vous devez avant tous respecter les conditions dans recrutement modération.**\n**__Si vous souhaitez devenir Concepteur serveur du Discord :__ Nous allons vous mettre à l'épreuve, vous devez,** *__Créer un serveur de test avec tout ce que vous savez faire dessus.__*\n**__Si vous souhaitez devenir Concepteur de BOT Discord :__ Nous allons vous mettre à l'épreuve, vous devez,** *__Créer un BOT Discord avec toutes les fonctions et commandes que vous pouvez faire dedans en suivant aussi nos services.__*\n**__Si vous souhaitez devenir Concepteur Graphisme;__  Nous allons vous mettre à l'épreuve vous devez,** *__Créer un Graphisme concernant le serveur Discord, (PacifiqueCreation) par vous même, vous avez carte blanche, en suivant aussi nos services__*\n\n__Remarque : Prendre un graphisme sur un moteur de recherche ou prendre des idées sur un moteur de recherche ou autre nous montre que vous êtes pas expérimenté et que vous n'avez pas d'imagination pour créer des œuvres.\n**__Si vous souhaitez devenir Collaborateur du Projet :__  vous respectez les critères de collaboration ? alors nous pouvons continuer, présentez-nous votre serveur discord et un personnel du serveur s'occupera de votre demande de collaboration**\n**__Si vous souhaitez devenir Concepteur de création et développement de vidéo pour des présentation de serveur sous format vidéo ;__ vous devez nous montrer une vidéo avec montage que vous avez créer vous même**\n*__Remarque :__ Dans tout les domaines de conceptions nous vous métrons à l'épreuve pour le domaine de recrutement de concepteur*")
 
     #take 
 
@@ -149,8 +149,8 @@ class Ticket(commands.Cog):
     async def end(self, ctx, user: discord.Member, channell : discord.TextChannel):
         test = ctx.message.author.mention
         guild = ctx.message.guild
-        await channell.send(f"Merci d'avoir utilisé nos service, {user.mention}, votre commande est terminé !")
-        await channell.send(f"Pensez aussi à remercier le concepteur qui a réaliser votre demmande dans <#679378795765039114> \nMerci ^^")
+        await channell.send(f"Merci d'avoir utilisé nos service, {user.mention}, votre commande est terminée !")
+        await channell.send(f"Pensez aussi à remercier le concepteur qui a réalisé votre demmande dans <#679378795765039114> \nMerci ^^")
         await channell.edit(name = f"{user.name}-finit")
 
         demande = discord.utils.get(guild.channels, id = 679302357330165770)
@@ -202,14 +202,14 @@ class Ticket(commands.Cog):
     async def take_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande" ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention} tu n'as pas les permissions nécessaires pour effectuer cette commande" ,delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque quelques arguments que tu ne m'as pas donnés ..." ,delete_after=10.0)
             await ctx.send("``take <@user> {channel}``" ,delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donnés sont mauvais ..." ,delete_after=10.0)
             await ctx.send("``take <@user> {channel}``" ,delete_after=10.0)
         else:
             await ctx.send(error)
@@ -218,14 +218,14 @@ class Ticket(commands.Cog):
     async def close_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande " ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande " ,delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque quelques arguments que tu ne m'as pas donnés ..." ,delete_after=10.0)
             await ctx.send("``close <@user> {channel}``" ,delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donnés sont mauvais ..." ,delete_after=10.0)
             await ctx.send("``close <@user> {channel}``" ,delete_after=10.0)
         else:
             pass
@@ -234,14 +234,14 @@ class Ticket(commands.Cog):
     async def end_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande" ,delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaires pour effectuer cette commande" ,delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne m'as pas donnés ..." ,delete_after=10.0)
             await ctx.send("``close <@user> {channel}``" ,delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ..." ,delete_after=10.0)
             await ctx.send("``close <@user> {channel}``" ,delete_after=10.0)
         else:
             pass
@@ -250,14 +250,14 @@ class Ticket(commands.Cog):
     async def del_ticket_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande" ,delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande" ,delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque quelques arguments que tu ne m'as pas donnés ..." ,delete_after=10.0)
             await ctx.send("``del_ticket <@user> {channel}``" ,delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ..." ,delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ..." ,delete_after=10.0)
             await ctx.send("``del_ticket <@user> {channel}``" ,delete_after=10.0)
         else:
             pass

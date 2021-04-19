@@ -51,7 +51,7 @@ class Admin(commands.Cog):
         try:
             await user.send(embed = embed)
         except :
-            await ctx.send("Je ne peux pas envoyer d'mp a cette utilisateur")
+            await ctx.send("Je ne peux pas envoyer d'mp a cet utilisateur")
         log = discord.utils.get(guild.channels, id = 682234253064667183)
         await log.send(embed = embed)
         conn.close()
@@ -60,14 +60,14 @@ class Admin(commands.Cog):
     async def warn_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécéssaire pour effectuer cette commande ",delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande ",delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un ou des arguments que tu ne m'a pas donnés ...",delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un ou des arguments que tu ne m'as pas donnés ...",delete_after=10.0)
             await ctx.send("``^^p.warn <@user> <raison du warn>``",delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les arguments que tu m'a donnés sont mauvais ...",delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les arguments que tu m'as donnés sont mauvais ...",delete_after=10.0)
             await ctx.send("``^^p.warn <@user> <raison du warn>``",delete_after=10.0)
 
     @commands.command(pass_context=True, aliases=['purge', 'clean'])
@@ -88,14 +88,14 @@ class Admin(commands.Cog):
     async def clear_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécéssaire pour effectuer cette commande ", delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande ", delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un ou des arguments que tu ne m'a pas donnés ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un ou des arguments que tu ne m'as pas donnés ...", delete_after=10.0)
             await ctx.send("``^^p.clear <nombre de message>``")
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donnés sont mauvais ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ...", delete_after=10.0)
             await ctx.send("``^^p.clear <nombre de message>``")
 
     @commands.command()
@@ -129,14 +129,14 @@ class Admin(commands.Cog):
     async def ban_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande", delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande", delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne m'as pas donnés ...", delete_after=10.0)
             await ctx.send("``^^p.ban <@user> <raison du warn>``", delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ...", delete_after=10.0)
             await ctx.send("``^^p.ban <@user> <raison du ban>``", delete_after=10.0)
 
     @commands.command()
@@ -182,14 +182,14 @@ class Admin(commands.Cog):
     async def kick_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande", delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande", delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne m'as pas donnés ...", delete_after=10.0)
             await ctx.send("``^^p.kick <@user> <raison du warn>``")
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ...", delete_after=10.0)
             await ctx.send("``^^p.kick <@user> <raison du warn>``", delete_after=10.0)
 
     @commands.command()
@@ -222,14 +222,14 @@ class Admin(commands.Cog):
     async def unban_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande ", delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande ", delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne m'as pas donnés ...", delete_after=10.0)
             await ctx.send("``^^p.unban <@user> <raison du warn>``", delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ...", delete_after=10.0)
             await ctx.send("``^^p.unban <@user> <raison du warn>``", delete_after=10.0)
 
     @commands.command()
@@ -243,14 +243,14 @@ class Admin(commands.Cog):
     async def say_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande ", delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécéssaire pour effectuer cette commande ", delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne m'as pas donnés ...", delete_after=10.0)
             await ctx.send("``^^p.say <message>``", delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ...", delete_after=10.0)
             await ctx.send("``^^p.say <message>``", delete_after=10.0)
 
     @bot.event
@@ -288,14 +288,14 @@ class Admin(commands.Cog):
     async def mute_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande",delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécessaire pour effectuer cette commande",delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ...", delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne m'as pas donnés ...", delete_after=10.0)
             await ctx.send("``^^p.mute <@user> <raison du warn>``",delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ...",delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donné sont mauvais ...",delete_after=10.0)
             await ctx.send("``^^p.mute <@user> <raison du warn>``",delete_after=10.0)
 
     @bot.command()
@@ -322,14 +322,14 @@ class Admin(commands.Cog):
     async def unmute_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions): 
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé {ctx.author.mention} tu n'a pas les permissions nécéssaire pour effectuer cette commande",delete_after=10.0)
+            await ctx.send(f"Désolé {ctx.author.mention} tu n'as pas les permissions nécessaire pour effectuer cette commande",delete_after=10.0)
         elif isinstance(error, commands.MissingRequiredArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne ma pas donné ...",delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Il manque un argument ou des arguments que tu ne m'as pas donnés ...",delete_after=10.0)
             await ctx.send("``^^p.unmute <@user> <raison du mute>``",delete_after=10.0)
         if isinstance(error, commands.BadArgument):
             await ctx.channel.purge(limit=1)
-            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'a donné sont mauvais ...",delete_after=10.0)
+            await ctx.send(f"Désolé... {ctx.author.mention}. Le ou les argument que tu m'as donnés sont mauvais ...",delete_after=10.0)
             await ctx.send("``^^p.unmute <@user> <raison du mute>``",delete_after=10.0)
 
 def setup(bot):

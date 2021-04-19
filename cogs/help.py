@@ -53,8 +53,8 @@ class BotHelpPageSource(menus.ListPageSource):
 
     async def format_page(self, menu, cogs):
         prefix = menu.ctx.prefix
-        description = f"Utiliser '{config.prefix}help ``commande``' pour plus d'info sur cette dernière.\n" \
-                      f"Faites '{config.prefix}help ``categorie``' pour plus d'info sur une catégorie.\n" \
+        description = f"Utiliser '{config.prefix}help ``commande``' pour plus d'infos sur cette dernière.\n" \
+                      f"Faites '{config.prefix}help ``categorie``' pour plus d'infos sur une catégorie.\n" \
                        "Pour plus d'aide, rejoins le serveur de support du bot : https://discord.gg/bT8cy6W"
 
         embed = discord.Embed(title='Catégories', description=description, colour=discord.Colour.blurple())
@@ -99,8 +99,8 @@ class HelpMenu(Pages):
     async def show_bot_help(self, payload):
         """shows how to use the bot"""
 
-        embed = discord.Embed(title='Comment utilisé le bot', colour=discord.Colour.blurple())
-        embed.title = 'Comment utilisé le bot'
+        embed = discord.Embed(title='Comment utiliser le bot', colour=discord.Colour.blurple())
+        embed.title = 'Comment utiliser le bot'
         embed.description = "Salut ! Bienvenue sur l'aide du bot."
 
         entries = (
@@ -130,7 +130,7 @@ class PaginatedHelpCommand(commands.HelpCommand):
     def __init__(self):
         super().__init__(command_attrs={
             'cooldown': commands.Cooldown(1, 3.0, commands.BucketType.member),
-            'help': "Montre l'aide a propos d'une commande, d'une catégorie"
+            'help': "Montre l'aide à propos d'une commande, d'une catégorie"
         })
 
     async def on_help_command_error(self, ctx, error):

@@ -37,15 +37,15 @@ async def on_ready():
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send("<:PacifiqueCreation22:#676896410184056856#> Il manque un argument. - <:PacifiqueCreation22:#676896410184056856#>")
+        await ctx.send("<:PacifiqueCreation22:676896410184056856> Il manque un argument. - <:PacifiqueCreation22:676896410184056856>")
     elif isinstance(error, commands.MissingPermissions):
-        await ctx.send("<:PacifiqueCreation22:#676896410184056856#> - Vous n'avez pas les permissions pour faire cette commande. - <:PacifiqueCreation22:#676896410184056856#>")
+        await ctx.send("<:PacifiqueCreation22:676896410184056856> - Vous n'avez pas les permissions pour faire cette commande. - <:PacifiqueCreation22:676896410184056856>")
     elif isinstance(error, commands.CheckFailure):
-        await ctx.send("<:PacifiqueCreation22:#676896410184056856#> - Oups... vous ne pouvez utilisez cette commande. - <:PacifiqueCreation22:#676896410184056856#>")
+        await ctx.send("<:PacifiqueCreation22:#676896410184056856#> - Oups... vous ne pouvez utilisez cette commande. - <:PacifiqueCreation22:676896410184056856>")
     if isinstance(error, discord.Forbidden):
-        await ctx.send("<:PacifiqueCreation22:#676896410184056856#> - Oups... je n'ai pas les permissions nécessaires pour faire cette commmande! - <:PacifiqueCreation22:#676896410184056856#>")
+        await ctx.send("<:PacifiqueCreation22:676896410184056856> - Oups... je n'ai pas les permissions nécessaires pour faire cette commmande! - <:PacifiqueCreation22:676896410184056856>")
     else:
-        await ctx.send(error)
+        await ctx.send("\n" + error + "\n")
         await ctx.send("Merci de contacter ender_creeps#4934 en cas de ce type de message suivi si possible d'un screen de l'erreur et de la commande, merci")
 
 
@@ -79,7 +79,7 @@ async def unload(ctx, extension):
 @bot.command()
 @commands.is_owner()
 async def restart(ctx):
-    "[Owner only] - Permet de rédémarer la shard."
+    "[Owner only] - Permet de redémarer la shard."
     await ctx.message.add_reaction('<:PacifiqueCreation38:677599361202520065>')
     await ctx.send("Redémarrage ... Attendez jusqu'à 5 secondes")
     restart_program()
