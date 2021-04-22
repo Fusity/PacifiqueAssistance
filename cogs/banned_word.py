@@ -10,18 +10,18 @@ import config
 
 bot = commands.Bot(command_prefix = f"{config.prefix}") #config du bot
 
-class Admin(commands.Cog):
-    """Add banned word command."""
+class bword(commands.Cog):
+    '''Add banned word command.'''
     def __init__(self, bot):
         self.bot = bot
     
     @bot.event
-    async def on_message(ctx, *, member):
-        await member.channel.send(ctx)
+    async def on_message(ctx):
+        await ctx.send("pong !")
 
 
 
 
 def setup(bot):
-    bot.add_cog(Admin(bot))
+    bot.add_cog(bword(bot))
 

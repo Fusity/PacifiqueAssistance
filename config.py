@@ -1,4 +1,4 @@
-token = "TOKEN OF THE BOT"
+token = "TOKEN"
 client_id = "681139825507958835"
 prefix = "p."
 name = "PacifiqueCreation"
