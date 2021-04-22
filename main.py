@@ -10,7 +10,7 @@ import sys
 bot = commands.Bot(command_prefix = f"{config.prefix}", description = f"{config.name}") #config du bot
 status = [f"{config.prefix}help",
         "A votre service",
-        "Powered by ender_creeps",
+        "Powered by ender_creeps and Fusity.tar.gz",
         "regarder les demandes de la PacifiqueCreation"
         ]
 
