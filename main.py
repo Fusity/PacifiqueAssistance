@@ -94,7 +94,6 @@ for filename in os.listdir('cogs/'):
 @commands.is_owner()
 async def load(ctx, extension):
     "[Owner only] - Permet de load un cogs"
-    
     bot.load_extension(f'cogs.{extension}')
     await ctx.send(f"{extension} loaded !")
     await ctx.message.add_reaction()
