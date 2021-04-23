@@ -7,4 +7,4 @@ install the following libraries :
 
 #### Discord Support
 You want to help us ?
-Go here -> [Pacifique Creation] (https://discord.gg/)
+Go here -> [Pacifique Creation](https://discord.gg/https://discord.gg/rgMwFvrZC7)
