@@ -96,7 +96,7 @@ async def load(ctx, extension):
     "[Owner only] - Permet de load un cogs"
     bot.load_extension(f'cogs.{extension}')
     message = await ctx.send(f"{extension} loaded !")
-    await message.add_reaction(':PacifiqueCreation38:835220791447912458')
+    await message.add_reaction('<:PacifiqueCreation38:835131679533826068>')
 
 @bot.command()
 @commands.is_owner()
@@ -105,7 +105,7 @@ async def reload(ctx, extension):
     bot.unload_extension(f'cogs.{extension}')
     bot.load_extension(f'cogs.{extension}')
     message = await ctx.send(f"{extension} reloaded !")
-    await message.add_reaction(':PacifiqueCreation38:835220791447912458')
+    await message.add_reaction('<:PacifiqueCreation38:835131679533826068>')
 
 
 @bot.command()
@@ -114,7 +114,7 @@ async def unload(ctx, extension):
     "[Owner only] - Permet d'unload un cogs"
     bot.unload_extension(f'cogs.{extension}')
     message = await ctx.send(f"{extension} unloaded !")
-    await message.add_reaction(':PacifiqueCreation38:835220791447912458')
+    await message.add_reaction('<:PacifiqueCreation38:835131679533826068>')
 
 @bot.command()
 @commands.is_owner()
