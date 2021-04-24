@@ -1,4 +1,4 @@
-token = "TOKEN"
+token = "Token"
 client_id = "681139825507958835"
 prefix = "p."
 name = "PacifiqueCreation"

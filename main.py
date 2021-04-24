@@ -70,23 +70,23 @@ async def on_ready():
 async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         print(error)
-        await ctx.send("<a:PacifiqueCreation22:676896410184056856> Il manque un argument. - <a:PacifiqueCreation22:676896410184056856>")
+        await ctx.send("<:PacifiqueCreation22:676896410184056856> Il manque un argument. - <:PacifiqueCreation22:676896410184056856>")
     elif isinstance(error, commands.MissingPermissions):
         print(error)
-        await ctx.send("<a:PacifiqueCreation22:676896410184056856> - Vous n'avez pas les permissions pour faire cette commande. - <a:PacifiqueCreation22:676896410184056856>")
+        await ctx.send("<:PacifiqueCreation22:676896410184056856> - Vous n'avez pas les permissions pour faire cette commande. - <:PacifiqueCreation22:676896410184056856>")
     elif isinstance(error, commands.CheckFailure):
         print(error)
-        await ctx.send("<a:PacifiqueCreation22:676896410184056856> - Oups... vous ne pouvez utilisez cette commande. - <a:PacifiqueCreation22:676896410184056856>")
+        await ctx.send("<:PacifiqueCreation22:676896410184056856> - Oups... vous ne pouvez utilisez cette commande. - <:PacifiqueCreation22:676896410184056856>")
     if isinstance(error, discord.Forbidden):
         print(error)
-        await ctx.send("<a:PacifiqueCreation22:676896410184056856> - Oups... je n'ai pas les permissions nécessaires pour faire cette commmande! - <a:PacifiqueCreation22:676896410184056856>")
+        await ctx.send("<:PacifiqueCreation22:676896410184056856> - Oups... je n'ai pas les permissions nécessaires pour faire cette commmande! - <:PacifiqueCreation22:676896410184056856>")
     else:
         print(error)
         await ctx.send("\n" + str(error) + "\n")
         await ctx.send("Merci de contacter ender_creeps#4934 en cas de ce type de message suivi si possible d'un screen de l'erreur et de la commande, merci")
 
 
-for filename in os.listdir('cogs/'):
+for filename in os.listdir('PacifiqueAssistance/cogs/'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}') 
 
@@ -96,7 +96,7 @@ async def load(ctx, extension):
     "[Owner only] - Permet de load un cogs"
     bot.load_extension(f'cogs.{extension}')
     await ctx.send(f"{extension} loaded !")
-    await ctx.message.add_reaction()
+    await ctx.message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
 
 @bot.command()
 @commands.is_owner()
@@ -105,7 +105,7 @@ async def reload(ctx, extension):
     bot.unload_extension(f'cogs.{extension}')
     bot.load_extension(f'cogs.{extension}')
     await ctx.send(f"{extension} reloaded !")
-    await ctx.message.add_reaction('<:PacifiqueCreation38:677599361202520065>')
+    await ctx.message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
 
 
 @bot.command()
@@ -114,13 +114,13 @@ async def unload(ctx, extension):
     "[Owner only] - Permet d'unload un cogs"
     bot.unload_extension(f'cogs.{extension}')
     await ctx.send(f"{extension} unloaded !")
-    await ctx.message.add_reaction('<:PacifiqueCreation38:677599361202520065>')
+    await ctx.message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
 
 @bot.command()
 @commands.is_owner()
 async def restart(ctx):
     "[Owner only] - Permet de redémarer la shard."
-    await ctx.message.add_reaction('<:PacifiqueCreation38:677599361202520065>')
+    await ctx.message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
     await ctx.send("Redémarrage ... Attendez jusqu'à 5 secondes")
     restart_program()
 
