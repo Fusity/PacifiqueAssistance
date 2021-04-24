@@ -95,8 +95,8 @@ for filename in os.listdir('PacifiqueAssistance/cogs/'):
 async def load(ctx, extension):
     "[Owner only] - Permet de load un cogs"
     bot.load_extension(f'cogs.{extension}')
-    await ctx.send(f"{extension} loaded !")
-    await ctx.message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
+    message = await ctx.send(f"{extension} loaded !")
+    await message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
 
 @bot.command()
 @commands.is_owner()
@@ -104,8 +104,8 @@ async def reload(ctx, extension):
     "[Owner only] - Permet de reload un cogs"
     bot.unload_extension(f'cogs.{extension}')
     bot.load_extension(f'cogs.{extension}')
-    await ctx.send(f"{extension} reloaded !")
-    await ctx.message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
+    message = await ctx.send(f"{extension} reloaded !")
+    await message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
 
 
 @bot.command()
@@ -113,8 +113,8 @@ async def reload(ctx, extension):
 async def unload(ctx, extension):
     "[Owner only] - Permet d'unload un cogs"
     bot.unload_extension(f'cogs.{extension}')
-    await ctx.send(f"{extension} unloaded !")
-    await ctx.message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
+    message = await ctx.send(f"{extension} unloaded !")
+    await message.add_reaction('<:PacifiqueCreation38:835220791447912458>')
 
 @bot.command()
 @commands.is_owner()
