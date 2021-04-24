@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'VPS'
+    sshEndpoint: 'vps'
     contents: '**'
     targetFolder: '/home/bottestpc'
     readyTimeout: '20000'
